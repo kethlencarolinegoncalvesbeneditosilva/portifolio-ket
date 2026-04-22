@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfólio de Links</title>
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #f0f0f0; margin: 0; text-align: center; }
+    header { background: #4a90e2; color: white; padding: 30px; }
+    h1 { margin: 0; }
+    .container { display: flex; flex-wrap: wrap; justify-content: center; margin: 30px; }
+    .link-card { background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                 margin: 15px; padding: 20px; width: 220px; text-align: center; transition: 0.3s; }
+    .link-card:hover { transform: scale(1.05); }
+    .link-card a { text-decoration: none; color: #4a90e2; font-weight: bold; }
+    footer { background: #333; color: white; padding: 15px; margin-top: 40px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌐 Portfólio de Links</h1>
+    <p>Todos os meus projetos em um só lugar</p>
+  </header>
+
+  <section class="container" id="links-container">
+    <!-- Os links vão aparecer aqui -->
+  </section>
+
+  <footer>
+    <p>© 2026 Ket</p>
+  </footer>
+
+  <script>
+    let links = [
+      { title: "teste", url: "https://alifer2211.github.io/teste.js/teste.js" },
+      { title: "teste2", url: "https://alifer2211.github.io/teste2.js/teste2.js" },
+      { title: "teste3", url: "https://alifer2211.github.io/teste3.js/teste3.js" },
+      { title: "carro", url: "https://alifer2211.github.io/carro.js/carro.js" },
+      { title: "notas", url: "https://alifer2211.github.io/notas.js/notas.js" },
+      { title: "media", url: "https://alifer2211.github.io/media/media_se.js" },
+      { title: "variaveis", url: "https://alifer2211.github.io/variaveis.js/variaveis.js" },
+      { title: "brake", url: "https://miguel09231309.github.io/brake_continue/brake_continue.js" },
+      { title: "objeto", url: "https://miguel09231309.github.io/objeto/objeto.js" },
+      { title: "filtrar", url: "https://miguel09231309.github.io/Filtrar/Filtrar.js" },
+      { title: "2js", url: "https://github.com/Miguel09231309/2js" },
+      { title: "4js", url: "https://github.com/Miguel09231309/4js" },
+      { title: "conjunto", url: "https://miguel09231309.github.io/conjuntonumero/conjuntonumero.js" },
+      { title: "exercicio", url: "https://miguel09231309.github.io/exercicio/exercicio.js" },
+      { title: "frutas", url: "https://miguel09231309.github.io/frutas/frutas.js" },
+      { title: "lista livros", url: "https://miguel09231309.github.io/listalivros/listalivros.js" }
+    ];
+
+    const container = document.getElementById("links-container");
+
+    links.forEach(link => {
+      const card = document.createElement("div");
+      card.className = "link-card";
+      card.innerHTML = <a href="${link.url}" target="_blank">${link.title}</a>;
+      container.appendChild(card);
+    });
+  </script>
+</body>
+</html>
