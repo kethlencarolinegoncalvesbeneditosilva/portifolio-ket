@@ -30,7 +30,7 @@
   </footer>
 
   <script>
-        let links = [
+    let links = [
       { title: "teste", url: "https://alifer2211.github.io/teste.js/teste.js" },
       { title: "teste2", url: "https://alifer2211.github.io/teste2.js/teste2.js" },
       { title: "teste3", url: "https://alifer2211.github.io/teste3.js/teste3.js" },
@@ -49,13 +49,12 @@
       { title: "lista livros", url: "https://miguel09231309.github.io/listalivros/listalivros.js" }
     ];
 
-
     const container = document.getElementById("links-container");
 
     links.forEach(link => {
       const card = document.createElement("div");
       card.className = "link-card";
-      card.innerHTML = <a href="${link.url}" target="_blank">${link.title}</a>;
+      card.innerHTML = `<a href="${link.url}" target="_blank">${link.title}</a>`;
       container.appendChild(card);
     });
   </script>
